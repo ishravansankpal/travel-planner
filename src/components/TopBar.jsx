@@ -14,7 +14,7 @@ export default function TopBar() {
   const ref = useRef(null);
   const initials = user.name.split(' ').map((w) => w[0]).slice(0, 2).join('').toUpperCase();
 
-  // Close the menu on outside click or Escape.
+  // Close the menu on outside click.
   useEffect(() => {
     const onClick = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
     const onKey = (e) => { if (e.key === 'Escape') setOpen(false); };
